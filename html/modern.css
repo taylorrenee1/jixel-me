@@ -1,0 +1,125 @@
+@font-face {
+  font-family: "BebasNeue";
+  src: url("https://db.onlinewebfonts.com/t/ba65c7020043d1d406686743e82e2e5d.eot");
+  src: url("https://db.onlinewebfonts.com/t/ba65c7020043d1d406686743e82e2e5d.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/ba65c7020043d1d406686743e82e2e5d.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/ba65c7020043d1d406686743e82e2e5d.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/ba65c7020043d1d406686743e82e2e5d.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/ba65c7020043d1d406686743e82e2e5d.svg#BebasNeue")format("svg");
+}
+
+html {
+  font-size: clamp(12px, 1.1vw, 18px);
+  font-family: 'BebasNeue', sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden !important;
+}
+
+.me-container {
+  --background-color: rgba(0, 0, 128, 0.48);
+  --border-color: rgba(192, 192, 192, 0.8);
+  --triangle-color: rgba(192, 192, 192, 0.8);
+  --font-color: #ffffff;
+  --icon-color: #ffffff;
+  --icon-size: 14px;
+  --icon-flip: -1;
+
+  max-width: 300px;
+  margin: 20px;
+  background: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 10px;
+  text-align: left;
+  font-size: 1rem;
+  color: var(--font-color);
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+}
+
+.me-container:before {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  border-left: 10px solid var(--triangle-color);
+  border-right: 10px solid transparent;
+  border-top: 10px solid var(--triangle-color);
+  border-bottom: 10px solid transparent;
+  left: 20px;
+  bottom: -20px;
+}
+
+.me-container i {
+  color: var(--icon-color);
+}
+
+.med-container {
+  --background-color: rgba(192, 55, 55, 0.48);
+  --border-color: rgba(192, 55, 55, 0.8);
+  --triangle-color: rgba(192, 55, 55, 0.8);
+  --font-color: #ffffff;
+  --icon-color: #ffffff;
+  --icon-size: 18px;
+  --icon-flip: 1;
+}
+
+.do-container {
+  --background-color: rgba(74, 0, 131, 0.37);
+  --border-color: rgba(154, 155, 150, 0.8);
+  --triangle-color: rgba(154, 155, 150, 0.8);
+  --font-color: #ffffff;
+  --icon-flip: 1;
+}
+
+.action-container {
+  --background-color: rgba(0, 72, 131, 0.37);
+  --border-color: rgba(242, 253, 77, 0.8);
+  --triangle-color: rgba(242, 253, 77, 0.8);
+  --font-color: #ffffff;
+  --icon-flip: 1;
+}
+
+.signs-container {
+  --background-color: rgba(0, 179, 162, 0.54);
+  --icon-color: #ffffff;
+  --icon-size: 18px;
+  --icon-flip: 1;
+}
+
+.icon-container {
+  margin-top: 3px;
+  margin-left: 3px;
+  width: var(--icon-size);
+  font-size: var(--icon-size);
+  transform: scaleX(var(--icon-flip));
+  aspect-ratio: 1/1;
+  float: left;
+  text-align: center;
+  margin-right: 5px;
+}
+
+.text-container {
+  display: block;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+
+.prefix {
+  font-weight: 300;
+  font-size: 12px;
+}
+
+.flip-icon {
+  display: inline-block;
+  transform: scaleX(-1);
+}
